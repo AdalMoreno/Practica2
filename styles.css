@@ -1,0 +1,217 @@
+/* Estilos generales */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/paisaje.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+
+/* Contenedor principal */
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Caja de formularios */
+
+.box {
+    border-radius: 12px;
+    padding: 25px;
+    width: 360px;
+    background: transparent;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Títulos */
+
+h3 {
+    background: linear-gradient(135deg, #3d2946, #2b223f);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Etiquetas */
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+}
+
+
+/* Campos de entrada */
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #3d2946;
+    box-shadow: 0px 0px 10px rgba(33, 147, 176, 0.4);
+}
+
+
+/* Botones */
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #3d2946, #2b223f);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3d2946, #2b223f);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+
+/* ======================== */
+
+
+/* CAMPOS DE ENTRADA (INPUT) */
+
+
+/* ======================== */
+
+input {
+    width: 90%;
+    /* Ajusta el ancho para que no se pase de los bordes */
+    max-width: 320px;
+    /* Evita que se expandan demasiado */
+    padding: 12px;
+    margin: 5px auto;
+    /* Centra los inputs horizontalmente */
+    display: block;
+    /* Asegura que se centren correctamente */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f7f7f7;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Efecto al enfocar el input */
+
+input:focus {
+    border-color: #3d2946;
+    box-shadow: 0px 0px 8px rgba(33, 147, 176, 0.5);
+    background: #ffffff;
+}
+
+
+/* ======================== */
+
+
+/* MEJOR DISEÑO PARA INPUT TYPE DATE */
+
+
+/* ======================== */
+
+input[type="date"] {
+    width: 90%;
+    max-width: 320px;
+    padding: 12px;
+    margin: 5px auto;
+    display: block;
+    border: 2px solid #3d2946;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #ffffff;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+/* Cambia el color del calendario emergente en Chrome y Edge */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('https://cdn-icons-png.flaticon.com/512/747/747310.png') no-repeat center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+
+/* ======================== */
+
+
+/* RESPONSIVIDAD */
+
+
+/* ======================== */
+
+@media (max-width: 768px) {
+    input[type="date"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA - RFC y API REST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulario RFC -->
+        <div class="box">
+            <h3>PRACTICA 2 - RFC</h3>
+            <label>NOMBRE:</label>
+            <input type="text" id="nombre">
+            <label>APELLIDO PAT.:</label>
+            <input type="text" id="apellidoPaterno">
+            <label>APELLIDO MAT.:</label>
+            <input type="text" id="apellidoMaterno">
+            <label>FECHA NACIMIENTO:</label>
+            <input type="date" id="fechaNacimiento">
+            <button id="generarRFC">GENERAR UN RFC</button>
+            <label>RFC:</label>
+            <input type="text" id="resultadoRFC" readonly>
+        </div>
+        
+        <!-- Formulario API REST -->
+        <div class="box">
+            <h3>AJAX - API REST</h3>
+            <label>ID del API:</label>
+            <input type="number" id="apiId" placeholder="Ingrese el ID">
+            <button id="consultarAPI">CONSULTAR API REST</button>
+            <label>NOMBRE:</label>
+            <input type="text" id="apiNombre" readonly>
+            <label>EMAIL:</label>
+            <input type="text" id="apiEmail" readonly>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
